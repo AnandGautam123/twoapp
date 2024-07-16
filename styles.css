@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+.cell.x::after {
+    content: 'X';
+    color: black;
+}
+
+.cell.circle::after {
+    content: 'O';
+    color: black;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.container {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.cell.X::after {
+    content: 'X';
+    color: black;
+}
+
+.cell.O::after {
+    content: 'O';
+    color: black;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
